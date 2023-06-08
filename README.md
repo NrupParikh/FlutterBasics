@@ -35,5 +35,17 @@
 ### Scaffold 
 - Framework to add material design elements like , AppBar, Floating Action Buttons, Drawers
 
-### Stack : overlapping a widget,
+### Stack
+- Used for overlapping a widget
+
+ 
+## Types of Layout Widgets
+
+### Single Child Widget
+- can have only one child widget inside the parent layout widget
+- Ex. Container,Padding,Center,Align,SizedBox,AspecRatio,Baseline,ConstrainedBox,FittedBox
+
+### Multiple Child Widget
+- can have multiple child widget inside the parent layout widget
+- Ex.Row and Column, ListView, GridView, Expanded, Table, Flow, Stack
  
