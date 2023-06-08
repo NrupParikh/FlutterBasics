@@ -1,6 +1,6 @@
 # FlutterBasics
 
-### Dart Languiage
+### Dart Language
 
 - Object Oriented Language
 - Developed by Google in 2011
