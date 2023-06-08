@@ -43,9 +43,9 @@
 
 ### Single Child Widget
 - can have only one child widget inside the parent layout widget
-- Ex. Container,Padding,Center,Align,SizedBox,AspecRatio,Baseline,ConstrainedBox,FittedBox
+- Ex. Container, Padding, Center, Align, SizedBox, AspecRatio, Baseline, ConstrainedBox, FittedBox
 
 ### Multiple Child Widget
 - can have multiple child widget inside the parent layout widget
-- Ex.Row and Column, ListView, GridView, Expanded, Table, Flow, Stack
+- Ex. Row and Column, ListView, GridView, Expanded, Table, Flow, Stack
  
