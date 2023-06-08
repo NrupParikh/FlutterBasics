@@ -32,6 +32,8 @@
 - Ex. Checkbox, Radio, TextField, Form, 
 - It is mutable. Means lieable to change.
 
-### Scaffold : Material design elements like ,  AppBar, Floating Action Buttons, Drawers
+### Scaffold 
+- Framework to add material design elements like , AppBar, Floating Action Buttons, Drawers
+
 ### Stack : overlapping a widget,
  
