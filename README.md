@@ -19,7 +19,9 @@
  - F:\Flutter\SDK\flutter_windows_3.10.4-stable\flutter\bin
 
 #### pubspec.yml
-- All Dependencies and configurations are defined here
+- Dependencies
+- configurations
+- assets and fonts are defined here
 
 ### Version Info
 - run> flutter --version
