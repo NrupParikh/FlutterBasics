@@ -69,3 +69,7 @@
 - It call the build() so, UI will be change as per state change.
 - For example, If you have int _counter = 0 variable and on Button click you want to update the _counter, you have to write  _counter++ in the setState(). So, It call the build() and update the UI with new state ( From 0 to 1 and so on.. )
  
+### Do I have to write seperate code for Android and IOS for just getting Native look and feel of any widget like, TextField or Button in Flutter ?
+
+- No, Flutter achieves a native look and feel by using its own set of widgets that closely mimic the platform-specific widgets on Android and iOS. 
+-  It uses Skia, a 2D rendering engine, to draw the widgets on the screen, ensuring that they look native on each platform.
