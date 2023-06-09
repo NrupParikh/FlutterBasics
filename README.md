@@ -52,5 +52,5 @@
 ### setState()
 - This method tells Flutter framework that something has changed in this state.
 - It call the build() so, UI will be change as per state change.
-- For example, If you have counter variable and on Button click you want to update the counter, you have to counter++ in the setState(). So, It call the build() and update the UI with new state ( From 0 to 1 and so on.. )
+- For example, If you have int _counter = 0 variable and on Button click you want to update the _counter, you have to _counter++ in the setState(). So, It call the build() and update the UI with new state ( From 0 to 1 and so on.. )
  
