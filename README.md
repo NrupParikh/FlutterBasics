@@ -174,3 +174,18 @@ String getInfo({String name = "Nrup", required int number}){
 // Output
 My name is Nrup and Roll number is 25
 ```
+## Navigation
+-----
+
+#### Navigation from One screen to other screen [ PUSH ]
+
+```
+ Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => const SecondScreen()));
+```
+
+### Navigate to back screen [ POP ]
+
+```
+ Navigator.of(context).pop()
+```
