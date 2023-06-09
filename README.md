@@ -8,15 +8,6 @@
 - Select flutter_windows_3.10.4-stable.zip
 - Extract in F:/Flutter/SDK  Recommand not to install in C: drive)
 
-### Version Info
-- run> flutter --version
-
-```
-Flutter 3.10.4 • channel stable • https://github.com/flutter/flutter.git
-Framework • revision 682aa387cf (3 days ago) • 2023-06-05 18:04:56 -0500
-Engine • revision 2a3401c9bb                                            
-Tools • Dart 3.0.3 • DevTools 2.23.1 
-```
 ### Set below configuration
 - Environment Variable > User Variable
 - F:\Flutter\SDK\flutter_sdk\flutter\bin
@@ -29,6 +20,33 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 
 #### pubspec.yml
 - All Dependencies are defined here
+
+### Version Info
+- run> flutter --version
+
+```
+Flutter 3.10.4 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision 682aa387cf (3 days ago) • 2023-06-05 18:04:56 -0500
+Engine • revision 2a3401c9bb                                            
+Tools • Dart 3.0.3 • DevTools 2.23.1 
+```
+
+### Flutter Doctor
+- run> flutter doctor
+
+~~~
+Flutter 3.10.4 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision 682aa387cf (3 days ago) • 2023-06-05 18:04:56 -0500
+Engine • revision 2a3401c9bb                                            
+Tools • Dart 3.0.3 • DevTools 2.23.1                                    
+    X Visual Studio not installed; this is necessary for Windows development.
+      Download at https://visualstudio.microsoft.com/downloads/.
+      Please install the "Desktop development with C++" workload, including all of its default components
+[√] Android Studio (version 2022.1)
+[√] Android Studio (version 2022.2)
+[√] Connected device (4 available)
+[√] Network resources
+~~~
 
 ### Dart Language
 
