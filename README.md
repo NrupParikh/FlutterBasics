@@ -48,4 +48,9 @@
 ### Multiple Child Widget
 - can have multiple child widget inside the parent layout widget
 - Ex. Row and Column, ListView, GridView, Expanded, Table, Flow, Stack
+
+### setState()
+- This method tells Flutter framework that something has changed in this state.
+- It call the build() so, UI will be change as per state change.
+- For example, If you have counter variable and on Button click you want to update the counter, you have to counter++ in the setState(). So, It call the build() and update the UI with new state ( From 0 to 1 and so on.. )
  
