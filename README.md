@@ -98,14 +98,13 @@
 ### Use of required keyword and default value in function
 ```
 void main() {
-  print('Hello, World!');
-  print(getInfo(number:25));
+   print(getInfo(number:25));
 }
 
 String getInfo({String name = "Nrup", required int number}){
   return "My name is $name and Roll number is $number";
 }
 
-Output
+// Output
 My name is Nrup and Roll number is 25
 ```
