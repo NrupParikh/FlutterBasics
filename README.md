@@ -109,7 +109,8 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 - It is mutable. Means lieable to change.
 
 ### Scaffold 
-- Framework to add material design elements like , AppBar, Floating Action Buttons, Drawers
+- Framework to add material design elements like , AppBar, Floating Action Buttons, Drawers, Bottom Sheets
+- Actual content is in body block
 
 ### Stack
 - Used for overlapping a widget
