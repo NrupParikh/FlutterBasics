@@ -15,8 +15,15 @@
 - Invisible widgets : Layout and control : Row, Column
 
 ### For Row and Column
-- mainAxisAlignment 
-- crossAxisAlignment 
+- mainAxisAlignment : If used in Column then it is Vertical alignment or Horizontal alignment 
+- crossAxisAlignment : If used in Column then it is Horizontal alignment or Vertical alignment 
+- both have below values
+ - start
+ - end
+ - center
+ - spaceBetween
+ - spaceAround
+ - spaceEvenly
 
 ### State Management Widget
 
