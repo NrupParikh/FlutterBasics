@@ -1,4 +1,4 @@
-# FlutterBasics
+# Basics of Flutter
 
 ### Installation
 
