@@ -17,13 +17,21 @@
 ### For Row and Column
 - mainAxisAlignment : If used in Column then it is Vertical alignment or Horizontal alignment 
 - crossAxisAlignment : If used in Column then it is Horizontal alignment or Vertical alignment 
-- both have below values
+
+- MainAxisAlignment have below values
  - start
  - end
  - center
  - spaceBetween
  - spaceAround
  - spaceEvenly
+
+- CrossAxisAlignment have below values
+ - start
+ - end
+ - center
+ - stretch
+ - baseline
 
 ### State Management Widget
 
