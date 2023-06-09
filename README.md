@@ -74,3 +74,25 @@
 
 - No, Flutter achieves a native look and feel by using its own set of widgets that closely mimic the platform-specific widgets on Android and iOS. 
 -  It uses Skia, a 2D rendering engine, to draw the widgets on the screen, ensuring that they look native on each platform.
+
+-----
+## Dart
+
+- Dart is strongly typed language
+- Dart is combination of Java and JS
+- Constant
+- final
+
+### Data Types
+
+- Number : Integer and Double
+- Strings : UTF-16
+- Boolean : True / False
+- Records : Multiple objects into a single object.
+- Lists 
+- Maps
+- Runes : UTF-32. Ex. \u2665. Heart symbol
+- Symbols : Object refers to an operator or identifier
+- null
+
+
