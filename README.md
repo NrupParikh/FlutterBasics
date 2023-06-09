@@ -64,6 +64,10 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 - c : Clear the screen
 - q : Quit (terminate the application on the device).
 
+### Where to do code?
+- In lib folder Main.dart used to do code
+- main() used to start application
+
 ----
 
 ### Dart Language
