@@ -69,15 +69,6 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 - main() used to start application
 
 ----
-
-### Dart Language
-
-- Object Oriented Language
-- Developed by Google in 2011
-- C-style syntex
-- Strongly Typed
-- First code compile and execute into machine code
-
 # Everything is widget
 
 ### Types of Widgets
@@ -146,12 +137,16 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 -  It uses Skia, a 2D rendering engine, to draw the widgets on the screen, ensuring that they look native on each platform.
 
 -----
-## Dart
 
-- Dart is strongly typed language
+### Dart Language
+
+- Object Oriented Language
+- Developed by Google in 2011
 - Dart is combination of Java and JS
-- Constant
-- final
+- C-style syntex
+- Strongly Typed
+- First code compile and execute into machine code
+- Has constant and final variables
 
 ### Data Types
 
