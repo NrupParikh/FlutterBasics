@@ -19,7 +19,7 @@
  - F:\Flutter\SDK\flutter_windows_3.10.4-stable\flutter\bin
 
 #### pubspec.yml
-- All Dependencies are defined here
+- All Dependencies and configurations are defined here
 
 ### Version Info
 - run> flutter --version
@@ -50,6 +50,17 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 
 ### Create Project
 - run> flutter create MyFirstFlutterApp
+
+### Running project
+- run> flutter run
+
+### Other commands while App already running
+- r : Hot reload.
+- R : Hot restart.
+- h : List all available interactive commands.
+- d : Detach (terminate "flutter run" but leave application running).
+- c : Clear the screen
+- q : Quit (terminate the application on the device).
 
 ----
 
