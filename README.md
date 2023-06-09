@@ -1,5 +1,26 @@
 # FlutterBasics
 
+### Installation
+
+- Download Flutter from 
+- https://docs.flutter.dev/get-started/install/windows
+
+- Select flutter_windows_3.10.4-stable.zip
+- Extract in F:/Flutter/SDK  Recommand not to install in C: drive)
+
+### Set below configuration
+- Environment Variable > User Variable
+- F:\Flutter\SDK\flutter_sdk\flutter\bin
+- And Install Flutter Plugin in Android Studio
+
+### Run flutter doctor in Android Studio terminal
+- flutter doctor
+ - F:\Flutter\SDK\flutter_sdk\flutter\bin
+ - F:\Flutter\SDK\flutter_windows_3.10.4-stable\flutter\bin
+
+#### pubspec.yml
+- All Dependencies are defined here
+
 ### Dart Language
 
 - Object Oriented Language
