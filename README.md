@@ -48,6 +48,8 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 [√] Network resources
 ~~~
 
+### Create Project
+- run> flutter create <Your AppName>
 ### Dart Language
 
 - Object Oriented Language
