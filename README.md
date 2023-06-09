@@ -124,7 +124,7 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 
 ### Multiple Child Widget
 - can have multiple child widget inside the parent layout widget
-- Ex. Row and Column, ListView, GridView, Expanded, Table, Flow, Stack
+- Ex. Row, Column, Stack, ListView, GridView, Expanded, Table, Flow
 
 ### setState()
 - This method tells Flutter framework that something has changed in this state.
