@@ -85,7 +85,7 @@
 
 ### Data Types
 
-- Number : Integer and Double
+- Number : int and double
 - Strings : UTF-16
 - Boolean : True / False
 - Records : Multiple objects into a single object.
