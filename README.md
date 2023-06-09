@@ -95,7 +95,7 @@
 - Symbols : Object refers to an operator or identifier
 - null
 
-### Use of required keyword in function
+### Use of required keyword and default value in function
 ```
 void main() {
   getInfo(number:25);
