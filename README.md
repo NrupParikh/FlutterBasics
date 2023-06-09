@@ -49,7 +49,10 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 ~~~
 
 ### Create Project
-- run> flutter create <Your AppName>
+- run> flutter create MyFirstFlutterApp
+
+----
+
 ### Dart Language
 
 - Object Oriented Language
