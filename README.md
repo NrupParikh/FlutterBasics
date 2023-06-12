@@ -285,17 +285,20 @@ Text("Second Screen",  style: GoogleFonts.getFont('Lato')) // Remember to remove
 -----
 
 ### API Call in Flutter
-- STEP1 : Add the http package.
-- STEP2 : Make a network request using the http package.
-- STEP3 : Convert the response into a custom Dart object.
-- STEP4 : Fetch and display the data with Flutter.
+- STEP 1 : Add the http package.
+- STEP 2 : Make a network request using the http package.
+- STEP 3 : Convert the response into a custom Dart object.
+- STEP 4 : Fetch and display the data with Flutter.
 
-### STEP1 : Add the http package
+### STEP 1 : Add the http package
 - For that execute below command in terminal
 ~~~
 flutter pub add http
 ~~~
 - You can see that http: ^1.0.0  added in pubspec.yaml file
+
+### STEP 2 : Make a network request using the http package
+
 
 ### References
 -----
