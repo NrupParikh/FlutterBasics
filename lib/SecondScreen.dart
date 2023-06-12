@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({super.key});
@@ -8,7 +9,7 @@ class FirstScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text("Second Screen"),
+        title: Text("Second Screen",  style: GoogleFonts.getFont('Lato')),
       ),
       body: SafeArea(
           child: Column(
