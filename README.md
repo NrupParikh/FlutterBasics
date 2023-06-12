@@ -272,3 +272,13 @@ import 'package:google_fonts/google_fonts.dart';
           Theme.of(context).textTheme
         )
 ~~~
+
+
+### References
+
+- Image in Flutter
+ - https://docs.flutter.dev/cookbook/images/network-image
+
+- Fonts in Flutter
+ - https://docs.flutter.dev/cookbook/design/fonts#from-packages
+ - https://docs.flutter.dev/cookbook/design/fonts#from-packages
