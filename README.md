@@ -284,7 +284,7 @@ Text("Second Screen",  style: GoogleFonts.getFont('Lato')) // Remember to remove
 
 -----
 
-### API Calling in Flutter
+### API Call in Flutter
 - STEP1 : Add the http package.
 - STEP2 : Make a network request using the http package.
 - STEP3 : Convert the response into a custom Dart object.
