@@ -280,7 +280,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 Text("Second Screen",  style: GoogleFonts.getFont('Lato')) // Remember to remove const if exist in the code.
 ~~~
-- This will change the font to Lato as you specified even the Text Theme is set to Lobster
+- This will change the font to **Lato** even the **Text Theme** is set to **Lobster**
 
 ### References
 -----
