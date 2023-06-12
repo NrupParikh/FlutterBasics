@@ -194,6 +194,15 @@ My name is Nrup and Roll number is 25
 
 - Create assets/images folder under the Project
 - Add any images. Ex. burger.jpg
+
+~~~
+// Folder structure
+
+assets
+  images
+   burger.jpg
+~~~
+
 - Open pubspec.yml file
 - Add below code to get access of images from assets/images folder
 
