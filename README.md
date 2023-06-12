@@ -280,5 +280,5 @@ import 'package:google_fonts/google_fonts.dart';
 https://docs.flutter.dev/cookbook/images/network-image
 
 #### Fonts in Flutter
-https://docs.flutter.dev/cookbook/design/fonts#from-packages
+https://docs.flutter.dev/cookbook/design/fonts#from-packages <br>
 https://docs.flutter.dev/cookbook/design/fonts#from-packages
