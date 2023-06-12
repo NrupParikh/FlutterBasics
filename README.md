@@ -276,9 +276,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 ### References
 
-- Image in Flutter
- - https://docs.flutter.dev/cookbook/images/network-image
+#### Image in Flutter
+https://docs.flutter.dev/cookbook/images/network-image
 
-- Fonts in Flutter
- - https://docs.flutter.dev/cookbook/design/fonts#from-packages
- - https://docs.flutter.dev/cookbook/design/fonts#from-packages
+#### Fonts in Flutter
+https://docs.flutter.dev/cookbook/design/fonts#from-packages
+https://docs.flutter.dev/cookbook/design/fonts#from-packages
