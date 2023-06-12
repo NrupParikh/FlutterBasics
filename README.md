@@ -132,7 +132,7 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 - For example, If you have int _counter = 0 variable and on Button click you want to update the _counter, you have to write  _counter++ in the setState(). So, It call the build() and update the UI with new state ( From 0 to 1 and so on.. )
 
 -----
-#### Q:  Do I have to write separate code for Android and IOS for just getting Native look and feel of any widget like, TextField or Button in Flutter ?
+#### Q:  Do I have to write seperate code for Android and IOS for just getting Native look and feel of any widget like, TextField or Button in Flutter ?
 
 - No, Flutter achieves a native look and feel by using its own set of widgets that closely mimic the platform-specific widgets on Android and iOS.
 -  It uses Skia, a 2D rendering engine, to draw the widgets on the screen, ensuring that they look native on each platform.
@@ -232,3 +232,61 @@ Image.network("https://picsum.photos/250")
 ```
 Image.network("https://docs.flutter.dev/assets/images/dash/dash-fainting.gif")
 ```
+
+### Working with Custom Fonts
+-----
+
+- In flutter we can set Google Font which reflact in all over our application
+- This will reduce the application size as font load on the fly
+- HTTP fetch the font run time. Which is ideal  for development
+- For that we have to add dependecy in pubspec.yaml file
+
+~~~
+// Command to get Google Font dependecy
+flutter pub add google_fonts
+
+- You will see that google_fonts: ^5.0.0 added in pubspec.yaml file 
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^5.0.0
+~~~
+
+- Now we have to set this font to whole our Theme for text
+- Go to main.dart
+- import below package
+
+~~~
+import 'package:google_fonts/google_fonts.dart';
+~~~
+
+- write below code for set Lobster Text Theme in whole application.
+- You can change to latoTextTheme latter.
+
+~~~
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+              textTheme: GoogleFonts.lobsterTextTheme(
+          Theme.of(context).textTheme
+        )
+~~~
+
+### Load font dynamically
+
+~~~
+import 'package:google_fonts/google_fonts.dart';
+
+Text("Second Screen",  style: GoogleFonts.getFont('Lato')) // Remember to remove const if exist in the code.
+~~~
+- This will change the font to **Lato** even the **Text Theme** is set to **Lobster**
+
+### References
+-----
+#### Image in Flutter
+https://docs.flutter.dev/cookbook/images/network-image
+
+#### Fonts in Flutter
+https://docs.flutter.dev/cookbook/design/fonts#from-packages <br>
+https://pub.dev/packages/google_fonts
