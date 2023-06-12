@@ -185,12 +185,11 @@ My name is Nrup and Roll number is 25
 ```
 
 ### Navigate to back screen [ POP ]
------
 
 ```
  Navigator.of(context).pop()
 ```
-
+-----
 ### Show Image from Assets folder
 
 - Create assets/images folder under the Project
