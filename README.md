@@ -189,3 +189,21 @@ My name is Nrup and Roll number is 25
 ```
  Navigator.of(context).pop()
 ```
+
+### Show Image
+
+- Create assets/images folder under the Project
+- Add any images. Ex. burger.jpg
+- Open pubspec.yml file
+- Add below code to get access of images from assets/images folder
+
+~~~
+flutter: 
+  assets:
+     - assets/images/
+~~~
+- Now Load image in Image widget
+
+~~~
+Image(image: AssetImage("assets/images/burger.jpg"))
+~~~
