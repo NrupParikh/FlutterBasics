@@ -302,6 +302,9 @@ flutter pub add http
 - Represents value or error that will be available at sometime in future
 
 ~~~
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+
 Future<String> fetchAlbum() async {
   final response = await http
       .get(Uri.parse("https://jsonplaceholder.typicode.com/albums/1"));
