@@ -218,3 +218,15 @@ flutter:
 ~~~
 Image(image: AssetImage("assets/images/burger.jpg"))
 ~~~
+
+### Show image from URL
+
+```
+Image.network("https://picsum.photos/250")
+```
+
+### Show Gif Image
+
+```
+Image.network("https://docs.flutter.dev/assets/images/dash/dash-fainting.gif")
+```
