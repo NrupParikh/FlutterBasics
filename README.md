@@ -273,6 +273,13 @@ import 'package:google_fonts/google_fonts.dart';
         )
 ~~~
 
+### Load font dynamically
+
+~~~
+import 'package:google_fonts/google_fonts.dart';
+
+Text("Second Screen",  style: GoogleFonts.getFont('Lato'))
+~~~
 
 ### References
 -----
