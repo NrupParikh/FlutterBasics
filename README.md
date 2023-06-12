@@ -281,4 +281,4 @@ https://docs.flutter.dev/cookbook/images/network-image
 
 #### Fonts in Flutter
 https://docs.flutter.dev/cookbook/design/fonts#from-packages <br>
-https://docs.flutter.dev/cookbook/design/fonts#from-packages
+https://pub.dev/packages/google_fonts
