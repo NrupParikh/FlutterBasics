@@ -298,7 +298,17 @@ flutter pub add http
 - You can see that http: ^1.0.0  added in pubspec.yaml file
 
 ### STEP 2 : Make a network request using the http package
+- **Future** used for **async** operations
+- Represents value or error that will be available at sometime in future
 
+~~~
+Future<String> fetchAlbum() async {
+  final response = await http
+      .get(Uri.parse("https://jsonplaceholder.typicode.com/albums/1"));
+  Map<String, dynamic> data = jsonDecode(response.body);
+  return data["title"];
+}
+~~~
 
 ### References
 -----
