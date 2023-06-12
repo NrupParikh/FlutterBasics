@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({super.key});
@@ -9,26 +8,33 @@ class FirstScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text("Second Screen",  style: GoogleFonts.getFont('Lato')),
+        title: const Text("Second Screen"),
       ),
-      body: SafeArea(
-          child: Column(
+      body: Column(
         children: [
-
           // Load assets image
           const Image(image: AssetImage("assets/images/burger.jpg")),
 
+          const Spacer(),
+
           // Load Network Image [ GIF ]
-          Image.network("https://docs.flutter.dev/assets/images/dash/dash-fainting.gif"),
+          Image.network(
+              "https://docs.flutter.dev/assets/images/dash/dash-fainting.gif"),
+
+          // Gives twice the space between Middle and End than Begin and Middle
+          const Spacer(flex: 2),
 
           // Go back screen
-          ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: const Text("Go back")),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: const Text("Go back")),
+          ),
         ],
-      )),
+      ),
     );
   }
 }
