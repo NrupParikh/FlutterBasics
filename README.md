@@ -198,9 +198,10 @@ My name is Nrup and Roll number is 25
 ~~~
 // Folder structure
 
-assets
-  images
-   burger.jpg
+FlutterApplication
+ assets
+   images
+    burger.jpg
 ~~~
 
 - Open pubspec.yml file
