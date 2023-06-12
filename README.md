@@ -189,8 +189,9 @@ My name is Nrup and Roll number is 25
 ```
  Navigator.of(context).pop()
 ```
------
+
 ### Show Image from Assets folder
+-----
 
 - Create assets/images folder under the Project
 - Add any images. Ex. burger.jpg
