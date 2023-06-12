@@ -233,7 +233,7 @@ Image.network("https://picsum.photos/250")
 Image.network("https://docs.flutter.dev/assets/images/dash/dash-fainting.gif")
 ```
 
-### Working with Fonts
+### Working with Custom Fonts
 -----
 
 - In flutter we can set Google Font which reflact in all over our application
