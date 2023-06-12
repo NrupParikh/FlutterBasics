@@ -282,6 +282,8 @@ Text("Second Screen",  style: GoogleFonts.getFont('Lato')) // Remember to remove
 ~~~
 - This will change the font to **Lato** even the **Text Theme** is set to **Lobster**
 
+-----
+
 ### API Calling in Flutter
 - STEP1 : Add the http package.
 - STEP2 : Make a network request using the http package.
