@@ -232,3 +232,43 @@ Image.network("https://picsum.photos/250")
 ```
 Image.network("https://docs.flutter.dev/assets/images/dash/dash-fainting.gif")
 ```
+
+### Working with Fonts
+-----
+
+- In flutter we can set Google Font which reflact in all over our application
+- This will reduce the application size as font load on the fly
+- HTTP fetch the font run time. Which is ideal  for development 
+- For that we have to add dependecy in pubspec.yaml file
+
+~~~
+// Command to get Google Font dependecy
+flutter pub add google_fonts
+
+- You will see that google_fonts: ^5.0.0 added in pubspec.yaml file 
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^5.0.0
+~~~
+
+- Now we have to set this font to whole our Theme for text
+- Go to main.dart
+- import below package
+
+~~~
+import 'package:google_fonts/google_fonts.dart';
+~~~
+
+- write below code for set Lobster Text Theme in whole application.
+- You can change to latoTextTheme latter.
+
+~~~
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+              textTheme: GoogleFonts.lobsterTextTheme(
+          Theme.of(context).textTheme
+        )
+~~~
