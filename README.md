@@ -6,6 +6,24 @@
 https://github.com/NrupParikh/FlutterBasics/assets/108717119/30073e43-0361-4e87-8596-6ae0c783e632
 
 ----
+### This repo contains
+
+- Custom font
+- Loading Image from asset and from URL
+- Google Font support
+- Navigation and data passing
+- API calling
+- Json Parsing
+- Show data on UI
+
+### Screens
+
+- **main.dart** : Increment number on click of floating action button. Show Google Font in Appbar and Text,button
+- **content.dart** : API calling, Json parssing and show quote on Text
+- **second_screen.dart** : Load image from Asset and GIF from internet
+- **album.dart** : Model class for getting album data
+
+----
 
 ### Installation
 
