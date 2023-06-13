@@ -69,7 +69,7 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 - main() used to start application
 
 ## Naming convention in Dart file
-- In dart we follow the snake case
+- In dart we follow the **snake** case
 - File save with .dart extension
 - Ex. main.dart, second_screen.dart, album.dart
 - But you can set Class name as Camel case. For e.g. class Album or class FirstScreen
