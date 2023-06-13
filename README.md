@@ -2,7 +2,7 @@
 
 ### Installation
 
-- Download Flutter from 
+- Download Flutter from
 - https://docs.flutter.dev/get-started/install/windows
 
 - Select flutter_windows_3.10.4-stable.zip
@@ -15,8 +15,8 @@
 
 ### Run flutter doctor in Android Studio terminal
 - flutter doctor
- - F:\Flutter\SDK\flutter_sdk\flutter\bin
- - F:\Flutter\SDK\flutter_windows_3.10.4-stable\flutter\bin
+- F:\Flutter\SDK\flutter_sdk\flutter\bin
+- F:\Flutter\SDK\flutter_windows_3.10.4-stable\flutter\bin
 
 #### pubspec.yml
 - Dependencies
@@ -76,46 +76,46 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 - Invisible widgets : Layout and control : Row, Column
 
 ### For Row and Column
-- mainAxisAlignment : If used in Column then it is Vertical alignment or Horizontal alignment 
-- crossAxisAlignment : If used in Column then it is Horizontal alignment or Vertical alignment 
+- mainAxisAlignment : If used in Column then it is Vertical alignment or Horizontal alignment
+- crossAxisAlignment : If used in Column then it is Horizontal alignment or Vertical alignment
 
 #### MainAxisAlignment have below values
- - start
- - end
- - center
- - spaceBetween
- - spaceAround
- - spaceEvenly
+- start
+- end
+- center
+- spaceBetween
+- spaceAround
+- spaceEvenly
 
 #### CrossAxisAlignment have below values
- - start
- - end
- - center
- - stretch
- - baseline
+- start
+- end
+- center
+- stretch
+- baseline
 
 ### State Management Widget
 
-### StatelessWidget 
+### StatelessWidget
 - build()
 - No state info. Not change over the time
 - Ex. Text, Row, Column, Container
 - It is immutable. Means remain static throughout its lifecycle
- 
+
 ### StatefulWidget
 - createState()
-- Has a state info. Change data over the time. 
-- Ex. Checkbox, Radio, TextField, Form, 
+- Has a state info. Change data over the time.
+- Ex. Checkbox, Radio, TextField, Form,
 - It is mutable. Means lieable to change.
 
-### Scaffold 
+### Scaffold
 - Framework to add material design elements like , AppBar, Floating Action Buttons, Drawers, Bottom Sheets
 - Actual content is in body block
 
 ### Stack
 - Used for overlapping a widget
 
- 
+
 ## Types of Layout Widgets
 
 ### Single Child Widget
@@ -131,10 +131,27 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 - It call the build() so, UI will be change as per state change.
 - For example, If you have int _counter = 0 variable and on Button click you want to update the _counter, you have to write  _counter++ in the setState(). So, It call the build() and update the UI with new state ( From 0 to 1 and so on.. )
 
------
-#### Q:  Do I have to write seperate code for Android and IOS for just getting Native look and feel of any widget like, TextField or Button in Flutter ?
+**- The class that extends State has two methods**
+  - initState() : Called at the time of widget is initialized
+  - dispose() : Called when you go out of widget
 
-- No, Flutter achieves a native look and feel by using its own set of widgets that closely mimic the platform-specific widgets on Android and iOS. 
+~~~
+ 
+ @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+  
+~~~
+-----
+#### Q:  Do I have to write separate code for Android and IOS for just getting Native look and feel of any widget like, TextField or Button in Flutter ?
+
+- No, Flutter achieves a native look and feel by using its own set of widgets that closely mimic the platform-specific widgets on Android and iOS.
 -  It uses Skia, a 2D rendering engine, to draw the widgets on the screen, ensuring that they look native on each platform.
 
 -----
@@ -155,7 +172,7 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 - Strings : UTF-16
 - Boolean : True / False
 - Records : Multiple objects into a single object.
-- Lists 
+- Lists
 - Maps
 - Runes : UTF-32. Ex. \u2665. Heart symbol
 - Symbols : Object refers to an operator or identifier
@@ -238,7 +255,7 @@ Image.network("https://docs.flutter.dev/assets/images/dash/dash-fainting.gif")
 
 - In flutter we can set Google Font which reflact in all over our application
 - This will reduce the application size as font load on the fly
-- HTTP fetch the font run time. Which is ideal  for development 
+- HTTP fetch the font run time. Which is ideal  for development
 - For that we have to add dependecy in pubspec.yaml file
 
 ~~~
@@ -281,6 +298,39 @@ import 'package:google_fonts/google_fonts.dart';
 Text("Second Screen",  style: GoogleFonts.getFont('Lato')) // Remember to remove const if exist in the code.
 ~~~
 - This will change the font to **Lato** even the **Text Theme** is set to **Lobster**
+
+-----
+
+### API Call in Flutter
+- STEP 1 : Add the http package.
+- STEP 2 : Make a network request using the http package.
+- STEP 3 : Convert the response into a custom Dart object.
+- STEP 4 : Fetch and display the data with Flutter.
+
+### STEP 1 : Add the http package
+- For that execute below command in terminal
+~~~
+flutter pub add http
+~~~
+- You can see that http: ^1.0.0  added in pubspec.yaml file
+
+### STEP 2 : Make a network request using the http package
+- **Future** used for **async** operations
+- Represents value or error that will be available at sometime in future
+
+~~~
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+
+Future fetchAlbum() async {
+  final response = await http
+      .get(Uri.parse("https://jsonplaceholder.typicode.com/albums/1"));
+  Map<String, dynamic> data = jsonDecode(response.body);
+  var title = data["title"];
+  print("Title is $title");
+}
+
+~~~
 
 ### References
 -----
