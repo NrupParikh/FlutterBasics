@@ -75,6 +75,19 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 - Ex. main.dart, second_screen.dart, album.dart
 - But you can set Class name as Camel case. For e.g. class Album or class FirstScreen
 - Reference : https://dart-lang.github.io/linter/lints/file_names.html
+
+## Log in dart file
+- Use **kDebugMode** when you use print()
+- This will not create log when app is in production
+
+~~~
+import 'package:flutter/foundation.dart';
+
+    if (kDebugMode) {
+       print("Hello world");
+    }
+~~~
+
 ----
 # Everything is widget
 
@@ -326,6 +339,9 @@ flutter pub add http
 - Represents value or error that will be available at sometime in future
 
 ~~~
+
+// Without Model
+
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
@@ -337,6 +353,98 @@ Future fetchAlbum() async {
   print("Title is $title");
 }
 
+// With Model
+
+Future<Album> fetchAlbum() async {
+  final response = await http
+      .get(Uri.parse("https://jsonplaceholder.typicode.com/albums/1"));
+
+  if (response.statusCode == 200) {
+    return Album.fromJson(jsonDecode(response.body));
+  } else {
+    throw Exception("Failed to load Album");
+  }
+}
+~~~
+
+### - STEP 3 : Convert the response into a custom Dart object.
+- Create album.dart file
+
+~~~
+
+class Album {
+  // Variables
+  final int userId;
+  final int id;
+  final String title;
+
+  // Constructor
+  const Album({
+    required this.userId,
+    required this.id,
+    required this.title,
+  });
+
+  // fromJson
+  factory Album.fromJson(Map<String, dynamic> json) {
+    return Album(userId: json["userId"], id: json["id"], title: json["title"]);
+  }
+
+  // toJson
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data["userId"] = userId;
+    data["id"] = id;
+    data["title"] = title;
+    return data;
+  }
+}
+~~~
+
+### - STEP 4 : Fetch and display the data with Flutter.
+- Define album instance which we get in the future in class _ContentState
+
+~~~
+late Future<Album> futureAlbum;
+~~~
+
+- call futureAlbum = fetchAlbum(); in initState()
+
+~~~
+Future<Album> fetchAlbum() async {
+  final response = await http
+      .get(Uri.parse("https://jsonplaceholder.typicode.com/albums/1"));
+
+  if (response.statusCode == 200) {
+    return Album.fromJson(jsonDecode(response.body));
+  } else {
+    throw Exception("Failed to load Album");
+  }
+}
+~~~
+- Display data on UI using FutureBuilder.
+- Show loader until response comes.
+~~~
+  body: Center(
+          child: FutureBuilder<Album>(
+            future: futureAlbum,
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return Text(
+                  snapshot.data!.title,
+                  style:
+                      const TextStyle(fontSize: 30, color: Colors.deepOrange),
+                  textAlign: TextAlign.center,
+                );
+              } else if (snapshot.hasError) {
+                return Text("${snapshot.error}");
+              }
+
+              // Show loading until response comes
+              return const CircularProgressIndicator();
+            },
+          ),
+        ));
 ~~~
 
 ### References
