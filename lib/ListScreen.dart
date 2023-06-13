@@ -25,6 +25,17 @@ Future fetchAlbum() async {
 class _ListScreenState extends State<ListScreen> {
   // Call on Button click
 
+  @override
+  void initState() {
+    print("initState");
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    print("dispose");
+    super.dispose();
+  }
   void _onPressed() {
     fetchAlbum();
   }
