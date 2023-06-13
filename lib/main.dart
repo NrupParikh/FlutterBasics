@@ -1,5 +1,5 @@
-import 'package:first_flutter_application/ListScreen.dart';
-import 'package:first_flutter_application/SecondScreen.dart';
+import 'package:first_flutter_application/list_screen.dart';
+import 'package:first_flutter_application/second_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
