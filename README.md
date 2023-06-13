@@ -8,9 +8,8 @@ https://github.com/NrupParikh/FlutterBasics/assets/108717119/30073e43-0361-4e87-
 ----
 ### This repo contains
 
-- Custom font
+- Custom font / Google Font support
 - Loading Image from asset and from URL
-- Google Font support
 - Navigation and data passing
 - API calling
 - Json Parsing
@@ -90,7 +89,7 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 - q : Quit (terminate the application on the device).
 
 ### Where to do code?
-- In lib folder Main.dart used to do code
+- In lib folder main.dart used to do code
 - main() used to start application
 
 ## Naming convention in Dart file
