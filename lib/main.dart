@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
         .push(MaterialPageRoute(builder: (context) => const FirstScreen()));
   }
 
-  void _loadListScreen() {
+  void _loadContent() {
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (context) => const Content()));
   }
@@ -132,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: _loadFirstScreen,
                 child: const Text("Go to Next screen")),
             ElevatedButton(
-                onPressed: _loadListScreen,
+                onPressed: _loadContent,
                 child: const Text("Go to Album Screen"))
           ],
         ),
