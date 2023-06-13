@@ -1,4 +1,4 @@
-import 'package:first_flutter_application/list_screen.dart';
+import 'package:first_flutter_application/content.dart';
 import 'package:first_flutter_application/second_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -81,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _loadListScreen() {
     Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => const ListScreen()));
+        .push(MaterialPageRoute(builder: (context) => const Content()));
   }
 
   @override
@@ -133,7 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: const Text("Go to Next screen")),
             ElevatedButton(
                 onPressed: _loadListScreen,
-                child: const Text("Go to List Screen"))
+                child: const Text("Go to Album Screen"))
           ],
         ),
       ),
