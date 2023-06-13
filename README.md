@@ -130,7 +130,8 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 - This method tells Flutter framework that something has changed in this state.
 - It call the build() so, UI will be change as per state change.
 - For example, If you have int _counter = 0 variable and on Button click you want to update the _counter, you have to write  _counter++ in the setState(). So, It call the build() and update the UI with new state ( From 0 to 1 and so on.. )
-  - The class that extends State has two methods
+
+**- The class that extends State has two methods**
   - initState() : Called at the time of widget is initialized
   - dispose() : Called when you go out of widget
 
