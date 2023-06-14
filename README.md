@@ -14,6 +14,7 @@ https://github.com/NrupParikh/FlutterBasics/assets/108717119/30073e43-0361-4e87-
 - API calling
 - Json Parsing
 - Show data on UI
+- Light and Dark Mode support
 
 ### Screens
 
@@ -112,6 +113,26 @@ import 'package:flutter/foundation.dart';
     }
 ~~~
 
+## Support Dark and Light Mode
+- ThemeData.dark() : For Dark theme
+- ThemeData.light() : For Light theme
+
+~~~
+// Support dark and light theme with changing app level font too.
+// If dark theme then textTheme is oxygenTextTheme
+// If light theme then textTheme is lobsterTextTheme
+
+return MaterialApp(
+      title: Constants.appTitle,
+      darkTheme: ThemeData.dark(useMaterial3: true).copyWith(
+          textTheme: GoogleFonts.oxygenTextTheme(Theme.of(context).textTheme)),
+      theme: ThemeData.light(useMaterial3: true).copyWith(
+          textTheme: GoogleFonts.lobsterTextTheme(Theme.of(context).textTheme)),
+~~~
+
+## Support Material3
+- ThemeData.dark(useMaterial3: true)
+- ThemeData.light(useMaterial3: true)
 ----
 # Everything is widget
 

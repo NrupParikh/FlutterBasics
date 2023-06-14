@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 
+import 'constants.dart';
+
 class Content extends StatefulWidget {
   const Content({super.key});
 
@@ -24,7 +26,7 @@ Future<Album> fetchAlbum() async {
   if (response.statusCode == 200) {
     return Album.fromJson(jsonDecode(response.body));
   } else {
-    throw Exception("Failed to load Album");
+    throw Exception(Constants.msgFailedToLoadAlbum);
   }
 }
 
@@ -51,7 +53,7 @@ class _ContentState extends State<Content> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text("Fetch Data from API",
+          title: Text(Constants.fetchDataFromApi,
               style: GoogleFonts.getFont('Cherry Cream Soda')),
         ),
         body: Center(

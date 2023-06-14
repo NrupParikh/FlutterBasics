@@ -1,3 +1,4 @@
+import 'package:first_flutter_application/constants.dart';
 import 'package:first_flutter_application/content.dart';
 import 'package:first_flutter_application/second_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,27 +18,14 @@ class MyApp extends StatelessWidget {
     String name = "Nrup";
 
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-          // This is the theme of your application.
-          //
-          // TRY THIS: Try running your application with "flutter run". You'll see
-          // the application has a blue toolbar. Then, without quitting the app,
-          // try changing the seedColor in the colorScheme below to Colors.green
-          // and then invoke "hot reload" (save your changes or press the "hot
-          // reload" button in a Flutter-supported IDE, or press "r" if you used
-          // the command line to start the app).
-          //
-          // Notice that the counter didn't reset back to zero; the application
-          // state is not lost during the reload. To reset the state, use hot
-          // restart instead.
-          //
-          // This works for code too, not just values: Most code changes can be
-          // tested with just a hot reload.
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-          useMaterial3: true,
+      title: Constants.appTitle,
+      supportedLocales: const [Locale("en", "US"), Locale("ar", "AE")],
+      darkTheme: ThemeData.dark(useMaterial3: true).copyWith(
+          textTheme: GoogleFonts.oxygenTextTheme(Theme.of(context).textTheme)),
+      theme: ThemeData.light(useMaterial3: true).copyWith(
           textTheme: GoogleFonts.lobsterTextTheme(Theme.of(context).textTheme)),
-      home: MyHomePage(title: "Learn flutter in $days days with $name"),
+      home: MyHomePage(
+          title: "${Constants.learnFlutterIn} $days ${Constants.daysWith}$name"),
     );
   }
 }
@@ -122,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              Constants.counterValue,
             ),
             Text(
               '$_counter',
@@ -130,10 +118,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ElevatedButton(
                 onPressed: _loadFirstScreen,
-                child: const Text("Go to Next screen")),
+                child: const Text(Constants.goNextScreen)),
             ElevatedButton(
                 onPressed: _loadContent,
-                child: const Text("Go to Album Screen"))
+                child: const Text(Constants.goAlbumScreen))
           ],
         ),
       ),
