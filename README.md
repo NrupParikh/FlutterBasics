@@ -496,8 +496,9 @@ Future<Album> fetchAlbum() async {
         ));
 ~~~
 
------
+
 ### Language Support in Flutter
+-----
 
 - In pubspec.yaml add dependency for localization
 
