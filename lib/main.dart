@@ -1,4 +1,5 @@
 import 'package:first_flutter_application/content.dart';
+import 'package:first_flutter_application/l10n/l10n.dart';
 import 'package:first_flutter_application/second_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData.light(useMaterial3: true).copyWith(
               textTheme:
                   GoogleFonts.actorTextTheme(Theme.of(context).textTheme)),
-          supportedLocales: AppLocalizations.supportedLocales,
+          supportedLocales: L10n.all,
           home: const MyHomePage(),
         );
       },
@@ -41,8 +42,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// https://www.youtube.com/watch?v=sTGyufxPnUM
-//"${AppLocalizations.of(context)!.learnFlutterIn} $days ${AppLocalizations.of(context)!.daysWith}$name")
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 

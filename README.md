@@ -496,6 +496,83 @@ Future<Album> fetchAlbum() async {
         ));
 ~~~
 
+### Language Support in Flutter
+- In pubspec.yaml add dependency for localization
+
+~~~
+flutter_localization: ^0.1.12
+~~~
+
+- Now under flutter: enable generate
+
+~~~
+  generate: true
+~~~
+
+- In your lib folder create l10n folder
+- Now create l10n.dart file and put below code
+
+~~~
+import 'package:flutter/material.dart';
+
+class L10n {
+  static final all = [
+    const Locale("en"),
+    const Locale("ar"),
+    const Locale("hi"),
+  ];
+}
+
+~~~
+
+
+-  Now add below line in build() of main.dart
+
+~~~
+return MaterialApp(
+ supportedLocales: L10n.all,
+)
+~~~
+
+- Now create l10n.yaml file under your project.
+- Add below code
+~~~
+l10n.yaml
+
+arb-dir: lib\l10n
+template-arb-file: app_en.arb
+output-localization-file: app_localizations.dart
+~~~
+
+- Now create Json file for each language to support
+  - app_en.arb : For English key and values
+  - app_hi.arb : For Hindi key and values
+  - app_ar.arb : For Arabic key and values
+
+- Run the application
+  - It will generate language specific dart file when you run the app.
+  - You can seen in dart_tool/flutter_gen/gen_l10n
+    - app_localizations.dart
+    - app_localizations_en.dart
+    - app_localizations_hi.dart
+    - app_localizations_ar.dart
+
+- Now to support localization in dart file add below import
+
+~~~
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+return MaterialApp(
+ localizationsDelegates: AppLocalizations.localizationsDelegates,
+)
+
+- Now you can translate language specific text when you change local
+
+~~~
+Text("${AppLocalizations.of(context)!.title}")
+~~~
+
+
 ### References
 -----
 #### Image in Flutter
@@ -504,3 +581,6 @@ https://docs.flutter.dev/cookbook/images/network-image
 #### Fonts in Flutter
 https://docs.flutter.dev/cookbook/design/fonts#from-packages <br>
 https://pub.dev/packages/google_fonts
+
+#### Internationalization and Localization in Flutter (i18n)
+https://www.youtube.com/watch?v=sTGyufxPnUM
