@@ -1,48 +1,50 @@
-import 'package:first_flutter_application/constants.dart';
 import 'package:first_flutter_application/content.dart';
 import 'package:first_flutter_application/second_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+const List<String> languageList = ['en', 'hi', 'ar'];
+final ValueNotifier<String> _selectedValue = ValueNotifier<String>('');
+ValueNotifier<Locale> _currentLocale =
+    ValueNotifier<Locale>(const Locale('en', ''));
+
 void main() {
+  _selectedValue.value = languageList[0];
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    int days = 30;
-    String name = "Nrup";
-
-    return MaterialApp(
-      title: Constants.appTitle,
-      supportedLocales: const [Locale("en", "US"), Locale("ar", "AE")],
-      darkTheme: ThemeData.dark(useMaterial3: true).copyWith(
-          textTheme: GoogleFonts.oxygenTextTheme(Theme.of(context).textTheme)),
-      theme: ThemeData.light(useMaterial3: true).copyWith(
-          textTheme: GoogleFonts.lobsterTextTheme(Theme.of(context).textTheme)),
-      home: MyHomePage(
-          title: "${Constants.learnFlutterIn} $days ${Constants.daysWith}$name"),
+    return ValueListenableBuilder<Locale>(
+      valueListenable: _currentLocale,
+      builder: (BuildContext context, Locale value, Widget? child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          // Other properties...
+          locale: value,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          darkTheme: ThemeData.dark(useMaterial3: true).copyWith(
+              textTheme:
+                  GoogleFonts.oxygenTextTheme(Theme.of(context).textTheme)),
+          theme: ThemeData.light(useMaterial3: true).copyWith(
+              textTheme:
+                  GoogleFonts.actorTextTheme(Theme.of(context).textTheme)),
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: const MyHomePage(),
+        );
+      },
     );
   }
 }
 
+// https://www.youtube.com/watch?v=sTGyufxPnUM
+//"${AppLocalizations.of(context)!.learnFlutterIn} $days ${AppLocalizations.of(context)!.daysWith}$name")
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -51,13 +53,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
+  // For dropdown
+  var dropdownValue = languageList.first;
+
   void _incrementCounter() {
     setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
       _counter++;
     });
   }
@@ -74,63 +74,85 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+    int days = 30;
+    String name = "Nrup";
+
     return Scaffold(
       appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: Text(
+            "${AppLocalizations.of(context)!.learnFlutterIn} $days ${AppLocalizations.of(context)!.daysWith} $name ${AppLocalizations.of(context)!.person}"),
       ),
       body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
         child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              Constants.counterValue,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: DropdownButton<String>(
+                icon: const Icon(Icons.arrow_downward),
+                elevation: 16,
+                style: TextStyle(
+                    fontSize: 20, color: Theme.of(context).colorScheme.primary),
+                underline: Container(
+                  height: 2,
+                  color: Colors.deepPurpleAccent,
+                ),
+                value: dropdownValue,
+                items:
+                    languageList.map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(
+                      value,
+                    ),
+                  );
+                }).toList(),
+                onChanged: (String? newValue) {
+                  setState(() {
+                    dropdownValue = newValue!;
+                    _selectedValue.value = newValue!;
+                    _currentLocale.value = Locale(newValue);
+                  });
+                },
+              ),
+            ),
+            const SizedBox(height: 50,),
+            Text('${AppLocalizations.of(context)!.selectedLanguage} ${_selectedValue.value}',
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Theme.of(context).colorScheme.primary)),
+            const SizedBox(height: 10,),
+            Text(
+              "${AppLocalizations.of(context)?.counterValue}",
+              style: TextStyle(
+                  fontSize: 20, color: Theme.of(context).colorScheme.primary),
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+              style: TextStyle(
+                  fontSize: 32, color: Theme.of(context).colorScheme.primary),
             ),
+            const SizedBox(height: 50,),
             ElevatedButton(
                 onPressed: _loadFirstScreen,
-                child: const Text(Constants.goNextScreen)),
+                child: Text("${AppLocalizations.of(context)?.goNextScreen}")),
+            const SizedBox(height: 50,),
             ElevatedButton(
                 onPressed: _loadContent,
-                child: const Text(Constants.goAlbumScreen))
+                child: Text("${AppLocalizations.of(context)?.goAlbumScreen}"))
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        // onPressed: _incrementCounter,
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
+  }
+
+  @override
+  void dispose() {
+    _selectedValue.dispose();
+    super.dispose();
   }
 }

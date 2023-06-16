@@ -15,6 +15,10 @@ https://github.com/NrupParikh/FlutterBasics/assets/108717119/30073e43-0361-4e87-
 - Json Parsing
 - Show data on UI
 - Light and Dark Mode support
+- Multi Language Support [English, Hindi, Arabic]
+- RTL and LTR support
+- Internationalization
+- Drop down to change the Language
 
 ### Screens
 

@@ -5,7 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'constants.dart';
 
 class Content extends StatefulWidget {
@@ -53,7 +53,7 @@ class _ContentState extends State<Content> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(Constants.fetchDataFromApi,
+          title: Text("${AppLocalizations.of(context)?.fetchDataFromApi}",
               style: GoogleFonts.getFont('Cherry Cream Soda')),
         ),
         body: Center(
@@ -61,11 +61,13 @@ class _ContentState extends State<Content> {
             future: futureAlbum,
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return Text(
-                  snapshot.data!.title,
-                  style:
-                      const TextStyle(fontSize: 30, color: Colors.deepOrange),
-                  textAlign: TextAlign.center,
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(snapshot.data!.title,
+                      style: TextStyle(
+                          fontSize: 32,
+                          color: Theme.of(context).colorScheme.primary),
+                      textAlign: TextAlign.center),
                 );
               } else if (snapshot.hasError) {
                 return Text("${snapshot.error}");

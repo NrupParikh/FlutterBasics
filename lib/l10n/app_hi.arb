@@ -1,0 +1,14 @@
+{
+  "appTitle": "Flutter डेमो",
+  "titleSecondScreen": "दूसरी स्क्रीन",
+  "goBack": "वापस जाओ",
+  "goNextScreen": "नेक्स्ट स्क्रीन पर जाएं",
+  "goAlbumScreen": "एल्बम स्क्रीन पर जाएं",
+  "counterValue": "कुल क्लिक यह हैं",
+  "learnFlutterIn": "Flutter जानें",
+  "daysWith": "दिनों में",
+  "msgFailedToLoadAlbum": "एल्बम लोड करने में विफल",
+  "fetchDataFromApi": "एपीआई से डेटा प्राप्त करें",
+  "person": "के साथ",
+  "selectedLanguage": "चयनित भाषा: "
+}

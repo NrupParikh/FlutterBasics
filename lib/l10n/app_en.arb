@@ -1,0 +1,52 @@
+{
+  "appTitle": "Flutter Demo",
+  "@language": {
+    "description": "Flutter Demo"
+  },
+  "titleSecondScreen": "Second Screen",
+  "@titleSecondScreen": {
+    "description": "Second Screen"
+  },
+  "goBack": "Go back",
+  "@goBack": {
+    "description": "Go back"
+  },
+  "goNextScreen": "Go to Next screen",
+  "@goNextScreen": {
+    "description": "Go to Next screen"
+  },
+  "goAlbumScreen": "Go to Album Screen",
+  "@goAlbumScreen": {
+    "description": "Go to Album Screen"
+  },
+  "counterValue": "Total clicks are ",
+  "@counterValue": {
+    "description": "Total clicks are "
+  },
+  "learnFlutterIn": "Learn flutter in",
+  "@learnFlutterIn": {
+    "description": "Learn flutter in"
+  },
+  "daysWith": "days with ",
+  "@daysWith": {
+    "description": "days with "
+  },
+  "msgFailedToLoadAlbum": "Failed to load Album",
+  "@msgFailedToLoadAlbum": {
+    "description": "Failed to load Album"
+  },
+  "fetchDataFromApi": "Fetch Data from API",
+  "@fetchDataFromApi": {
+    "description": "Fetch Data from API"
+  },
+
+  "person": "",
+  "@person": {
+    "description": ""
+  },
+
+  "selectedLanguage": "Selected Language: ",
+  "@selectedLanguage": {
+    "description": "Selected Language: "
+  }
+}

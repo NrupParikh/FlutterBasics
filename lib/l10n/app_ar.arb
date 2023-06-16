@@ -1,0 +1,14 @@
+{
+  "appTitle": "عرض Flutter",
+  "titleSecondScreen": "الشاشة الثانية",
+  "goBack": "عُد",
+  "goNextScreen": "انتقل إلى الشاشة التالية",
+  "goAlbumScreen": "انتقل إلى شاشة الألبوم",
+  "counterValue": "إجمالي النقرات هو هذا",
+  "learnFlutterIn": "تعلم الرفرفة في",
+  "daysWith": "أيام",
+  "msgFailedToLoadAlbum": "فشل تحميل الألبوم",
+  "fetchDataFromApi": "إحضار البيانات من API",
+  "person": "",
+  "selectedLanguage": "اللغة المختارة"
+}

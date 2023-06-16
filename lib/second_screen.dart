@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'constants.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 class FirstScreen extends StatelessWidget {
   const FirstScreen({super.key});
 
@@ -8,7 +9,7 @@ class FirstScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text(Constants.titleSecondScreen),
+        title: Text("${AppLocalizations.of(context)?.titleSecondScreen}"),
       ),
       body: SingleChildScrollView(
         child: Align(
@@ -27,7 +28,7 @@ class FirstScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
-                    child: const Text(Constants.goBack)),
+                    child: Text("${AppLocalizations.of(context)?.goBack}")),
               ),
             ],
           ),
