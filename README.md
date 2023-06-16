@@ -589,6 +589,7 @@ return MaterialApp(
  localizationsDelegates: AppLocalizations.localizationsDelegates,
 )
 
+~~~
 - Now you can translate language specific text when you change local
 
 ~~~
