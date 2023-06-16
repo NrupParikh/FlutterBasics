@@ -3,7 +3,7 @@
 ### Video of my work
 ----
 
-https://github.com/NrupParikh/FlutterBasics/assets/108717119/30073e43-0361-4e87-8596-6ae0c783e632
+https://github.com/NrupParikh/FlutterBasics/assets/108717119/4060206a-669b-454e-a66f-74c1b1c8b56f
 
 ----
 ### This repo contains
