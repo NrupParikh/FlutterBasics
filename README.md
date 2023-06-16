@@ -497,6 +497,7 @@ Future<Album> fetchAlbum() async {
 ~~~
 
 ### Language Support in Flutter
+
 - In pubspec.yaml add dependency for localization
 
 ~~~
@@ -590,6 +591,7 @@ return MaterialApp(
 )
 
 ~~~
+
 - Now you can translate language specific text when you change local
 
 ~~~
