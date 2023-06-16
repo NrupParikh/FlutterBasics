@@ -1,6 +1,6 @@
 {
   "appTitle": "Flutter Demo",
-  "@language": {
+  "@appTitle": {
     "description": "Flutter Demo"
   },
   "titleSecondScreen": "Second Screen",

@@ -549,6 +549,29 @@ output-localization-file: app_localizations.dart
   - app_hi.arb : For Hindi key and values
   - app_ar.arb : For Arabic key and values
 
+~~~
+app_en.arb
+
+{
+  "appTitle": "Flutter Demo",
+  "@appTitle": {
+    "description": "Flutter Demo"
+  },
+}
+ 
+app_hi.arb
+ 
+{
+  "appTitle": "Flutter डेमो",
+}
+
+app_ar.arb
+
+{
+  "appTitle": "عرض Flutter",
+}  
+~~~
+
 - Run the application
   - It will generate language specific dart file when you run the app.
   - You can seen in dart_tool/flutter_gen/gen_l10n
