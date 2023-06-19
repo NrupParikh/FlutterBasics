@@ -8,6 +8,7 @@ https://github.com/NrupParikh/FlutterBasics/assets/108717119/4060206a-669b-454e-
 ----
 ### This repo contains
 
+- Custom Application Icon for [ Android / WEB ]
 - Custom font / Google Font support
 - Loading Image from asset and from URL
 - Navigation and data passing
@@ -599,6 +600,84 @@ return MaterialApp(
 ~~~
 Text("${AppLocalizations.of(context)!.title}")
 ~~~
+
+### How to change Application Icon in flutter
+----
+
+- **For Android**
+    - Add ic_launcher.png in
+        - mipmap-mdpi [48x48]
+        - mipmap-hdpi [72x72]
+        - mipmap-xhdpi [96x96]
+        - mipmap-xxhdpi [144x144]
+        - mipmap-xxxhdpi [512x512]
+        
+    - This will change the Splash Screen Icon too. :)
+    
+- **For iOS**
+    - Configure Info.plist
+    - Open the ios/Runner/Info.plist
+    - Replace the default icon entries with the filenames of your new icons. 
+
+```
+<key>CFBundleIconFile</key>
+<string>AppIcon</string>
+```
+
+- **For Web**
+    - project > lib > icons 
+        - favicon-16x16.png
+        - favicon-32x32.png
+        - favicon-96x96.png
+        - favicon-180x180.png
+        - favicon-300x300.png
+        - favicon-512x512.png
+
+- Now web > manifest.json > icons array like
+
+```
+"icons": [
+    {
+      "src": "icons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/favicon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/favicon-300x300.png",
+      "sizes": "300x300",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+```
+
+### Which icon size suitable for what in web
+
+- **16x16** : The size of browser favicons.
+- **32x32** : The size of taskbar shortcut icons.
+- **96x96** : The size of desktop shortcut icons.
+- **180x180** : The size of Apple touch icons.
+- **300x300** : The size required by Squarespace.
+- **512x512** :The size required by WordPress.
 
 
 ### References
