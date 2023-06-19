@@ -695,3 +695,9 @@ https://pub.dev/packages/google_fonts
 
 #### Internationalization and Localization in Flutter (i18n)
 https://www.youtube.com/watch?v=sTGyufxPnUM
+
+#### How To Change Application Launcher Icon
+https://medium.com/@pinkesh.earth/flutter-beginners-tip-how-to-change-application-launcher-icon-67701d64267c
+
+#### Generate App Icons for Android/IOS/Web
+https://icon.kitchen/
