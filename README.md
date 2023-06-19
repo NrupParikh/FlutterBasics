@@ -670,6 +670,10 @@ Text("${AppLocalizations.of(context)!.title}")
   ]
 ```
 
+- Also put respective resolution and size icon in **web > icons** with the same name as default
+- Also change **favicon.png** with your app icon
+- In my case, this will works for me when I run the Chrome(web) and Edge(web) application
+
 ### Which icon size suitable for what in web
 
 - **16x16** : The size of browser favicons.
