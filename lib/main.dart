@@ -110,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 onChanged: (String? newValue) {
                   setState(() {
                     dropdownValue = newValue!;
-                    _selectedValue.value = newValue!;
+                    _selectedValue.value = newValue;
                     _currentLocale.value = Locale(newValue);
                   });
                 },
