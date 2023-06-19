@@ -611,7 +611,9 @@ Text("${AppLocalizations.of(context)!.title}")
         - mipmap-xhdpi [96x96]
         - mipmap-xxhdpi [144x144]
         - mipmap-xxxhdpi [512x512]
-
+        
+    - This will change the Splash Screen Icon too. :)
+    
 - **For iOS**
     - Configure Info.plist
     - Open the ios/Runner/Info.plist
