@@ -24,8 +24,8 @@ https://github.com/NrupParikh/FlutterBasics/assets/108717119/4060206a-669b-454e-
 ### Screens
 
 - **main.dart** : Increment number on click of floating action button. Show Google Font in Appbar and Text,button
-- **content.dart** : API calling, Json parssing and show quote on Text
-- **second_screen.dart** : Load image from Asset and GIF from internet
+- **content.dart** : API calling, Json parsing and show quote on Text
+- **first_screen.dart** : Load image from Asset and GIF from internet
 - **album.dart** : Model class for getting album data
 
 ----
@@ -102,7 +102,7 @@ Tools • Dart 3.0.3 • DevTools 2.23.1
 - In dart we follow the **snake** case
 - Name source files using **lowercase_with_underscores**
 - File save with .dart extension
-- Ex. main.dart, second_screen.dart, album.dart
+- Ex. main.dart, first_screen.dart, album.dart
 - But you can set Class name as Camel case. For e.g. class Album or class FirstScreen
 - Reference : https://dart-lang.github.io/linter/lints/file_names.html
 
