@@ -129,24 +129,22 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 GestureDetector(
                   onTap: () {
-                    setState(() {
-                      if (_isEnglishSelected) {
-                        _isEnglishSelected = false;
-                      } else {
-                        _isEnglishSelected = true;
-                        _isHindiSelected = false;
-                        _isArabicSelected = false;
+                    if (_isEnglishSelected) {
+                      _isEnglishSelected = false;
+                    } else {
+                      _isEnglishSelected = true;
+                      _isHindiSelected = false;
+                      _isArabicSelected = false;
 
-                        // Set English Language
-                        context
-                            .read<ThemeProvider>()
-                            .changeCurrentLocal(context, "en");
-                        _currentLocale.value = const Locale("en");
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                            content: Text(AppLocalizations.of(context)!
-                                .msgEnglishSelected)));
-                      }
-                    });
+                      // Set English Language
+                      context
+                          .read<ThemeProvider>()
+                          .changeCurrentLocal(context, "en");
+                      _currentLocale.value = const Locale("en");
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          content: Text(AppLocalizations.of(context)!
+                              .msgEnglishSelected)));
+                    }
                   },
                   child: Container(
                       alignment: Alignment.center,
@@ -169,24 +167,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    setState(() {
-                      if (_isHindiSelected) {
-                        _isHindiSelected = false;
-                      } else {
-                        _isEnglishSelected = false;
-                        _isHindiSelected = true;
-                        _isArabicSelected = false;
+                    if (_isHindiSelected) {
+                      _isHindiSelected = false;
+                    } else {
+                      _isEnglishSelected = false;
+                      _isHindiSelected = true;
+                      _isArabicSelected = false;
 
-                        // Set English Language
-                        context
-                            .read<ThemeProvider>()
-                            .changeCurrentLocal(context, "hi");
-                        _currentLocale.value = const Locale("hi");
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                            content: Text(AppLocalizations.of(context)!
-                                .msgHindiSelected)));
-                      }
-                    });
+                      // Set English Language
+                      context
+                          .read<ThemeProvider>()
+                          .changeCurrentLocal(context, "hi");
+                      _currentLocale.value = const Locale("hi");
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          content: Text(
+                              AppLocalizations.of(context)!.msgHindiSelected)));
+                    }
                   },
                   child: Container(
                       alignment: Alignment.center,
@@ -209,24 +205,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    setState(() {
-                      if (_isArabicSelected) {
-                        _isArabicSelected = false;
-                      } else {
-                        _isEnglishSelected = false;
-                        _isHindiSelected = false;
-                        _isArabicSelected = true;
+                    if (_isArabicSelected) {
+                      _isArabicSelected = false;
+                    } else {
+                      _isEnglishSelected = false;
+                      _isHindiSelected = false;
+                      _isArabicSelected = true;
 
-                        // Set English Language
-                        context
-                            .read<ThemeProvider>()
-                            .changeCurrentLocal(context, "ar");
-                        _currentLocale.value = const Locale("ar");
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                            content: Text(AppLocalizations.of(context)!
-                                .msgArabicSelected)));
-                      }
-                    });
+                      // Set English Language
+                      context
+                          .read<ThemeProvider>()
+                          .changeCurrentLocal(context, "ar");
+                      _currentLocale.value = const Locale("ar");
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          content: Text(AppLocalizations.of(context)!
+                              .msgArabicSelected)));
+                    }
                   },
                   child: Container(
                       alignment: Alignment.center,
