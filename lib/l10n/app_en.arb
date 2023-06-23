@@ -48,5 +48,19 @@
   "selectedLanguage": "Selected Language: ",
   "@selectedLanguage": {
     "description": "Selected Language: "
+  },
+
+  "msgEnglishSelected": "You have selected English language.",
+  "@msgEnglishSelected": {
+    "description": "You have selected English language."
+  },
+
+  "msgHindiSelected": "You have selected Hindi language.",
+  "@msgHindiSelected": {
+    "description": "You have selected Hindi language."
+  },
+  "msgArabicSelected": "You have selected Arabic language.",
+  "@msgArabicSelected": {
+    "description": "You have selected Arabic language."
   }
 }

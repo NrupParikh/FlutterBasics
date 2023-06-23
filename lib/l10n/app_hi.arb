@@ -10,5 +10,8 @@
   "msgFailedToLoadAlbum": "एल्बम लोड करने में विफल",
   "fetchDataFromApi": "एपीआई से डेटा प्राप्त करें",
   "person": "के साथ",
-  "selectedLanguage": "चयनित भाषा: "
+  "selectedLanguage": "चयनित भाषा: ",
+  "msgEnglishSelected": "आपने अंग्रेजी भाषा का चयन किया है।",
+  "msgHindiSelected": "आपने हिंदी भाषा का चयन किया है।",
+  "msgArabicSelected": "आपने अरबी भाषा का चयन किया है।"
 }

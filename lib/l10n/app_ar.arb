@@ -10,5 +10,8 @@
   "msgFailedToLoadAlbum": "فشل تحميل الألبوم",
   "fetchDataFromApi": "إحضار البيانات من API",
   "person": "",
-  "selectedLanguage": "اللغة المختارة"
+  "selectedLanguage": "اللغة المختارة",
+  "msgEnglishSelected": "لقد اخترت اللغة الإنجليزية.",
+  "msgHindiSelected": "لقد اخترت اللغة الهندية.",
+  "msgArabicSelected": "لقد اخترت اللغة العربية."
 }
